@@ -1,0 +1,168 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+a {
+  color: #196a74;
+  text-decoration: none;
+}
+
+.page {
+   background-image: url("http://pong.com.mx/wordpress/wp-content/uploads/2017/02/fondo_anuncio.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.cd-background-wrapper {
+ 
+  position: relative;
+  overflow: hidden;
+}
+
+.cd-floating-background {
+  position: absolute;
+  margin-left: 23%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.cd-floating-background.is-absolute {
+  position: absolute;
+}
+.cd-floating-background img {
+  display: block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* fixes a Firefox bug - images not correctly rendered*/
+}
+.cd-floating-background img:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cd-floating-background img:first-child {
+  width: 50%;
+  float: center;
+  -webkit-transform: translateZ(290px);
+  -ms-transform: translateZ(290px);
+  transform: translateZ(290px);
+}
+.cd-floating-background img:nth-child(2) {
+  width: 50%;
+  padding-top: 23%;
+  padding-left: 20%;
+  padding-right: 15%;
+  -webkit-transform: translateZ(400px);
+  -ms-transform: translateZ(400px);
+  transform: translateZ(400px);
+  
+}
+.no-preserve-3d .cd-floating-background {
+  /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
+  position: relative;
+}
+
+/*Menu*/
+div.contain
+{
+   font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0 auto;
+  padding: 1em 1em;
+  text-align: center;
+}
+
+div.contain a
+{
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 2em;
+    font-weight: 200;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+
+
+div.brackets a:before, div.brackets a:after
+{
+    position: absolute;
+    opacity: 0;
+    font-size: 2em;
+    top: 0px;
+    transition: all 0.3s;
+}
+
+div.brackets a:before
+{
+    content: '(';
+    font-family: Raleway;
+    margin-top: .15em;
+    left: 0px;
+    transform: translateX(10px);
+}
+
+div.brackets a:after
+{
+    content: ')';
+    font-family: Raleway;
+    margin-top: .15em;
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+div.brackets a:hover:before, div.brackets a:hover:after
+{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.navbar-collapse > ul >li >a:hover {
+  background-color: transparent;
+
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+
+.navbar .navbar-toggle .icon-bar {
+  background-color: white;
+}
